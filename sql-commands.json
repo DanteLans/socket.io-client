@@ -1,0 +1,20 @@
+{
+    "CREATE_BOARDSTABLE": "CREATE TABLE IF NOT EXISTS boards (id INTEGER PRIMARY KEY AUTOINCREMENT, game TEXT NOT NULL, user BLOB NOT NULL, timetransac TEXT NOT NULL, betAmount REAL NOT NULL, section TEXT NOT NULL, type TEXT NOT NULL, multiplier REAL, redirect TEXT, pay REAL )",
+    "INSERT_DATA": "BEGIN TRANSACTION; INSERT OR IGNORE INTO boards (id, game, user, timetransac, betamount, section, type, redirect, multiplier, pay) VALUES %INSERTDATA%; COMMIT;",
+    "CASINO_DATA": [
+        "(1,'Victory Line', 'B944**', 1699415147136, 12.55, 'casino', 'null', 'gameId=5352&extGameId=148&origin=New%20Games&ProviderID=1', 1.5,18.825)",
+        "(2, 'Mummys Gold', 'B946**', 1699416030049, 10, 'casino', 'Gold', 'gameId=5358&extGameId=softswiss:MummysGold&origin=New%20Games&ProviderID=16', 1.3, 13)",
+        "(3, 'Mummys Gold', 'B946**', 1699416030049, 10, 'casino', 'Gold', 'gameId=5358&extGameId=softswiss:MummysGold&origin=New%20Games&ProviderID=16', 1.3, 13)",
+        "(4, 'Mummy Gold', 'B946**', 1699416030049, 10, 'casino', 'Gold', 'gameId=5386&extGameId=102217&origin=New%20Games&ProviderID=13', 1.3, 13)",
+        "(5, 'Mummy Gold', 'B946**', 1699416030049, 10, 'casino', 'Gold', 'gameId=5386&extGameId=102217&origin=New%20Games&ProviderID=13', 1.3, 13)",
+        "(6, 'Big Salmon Run', 'B946**', 1699416030049, 10, 'casino', 'Gold', 'gameId=5386&extGameId=102217&origin=New%20Games&ProviderID=13', 1.3, 13)",
+        "(7, 'Muertos Mariachi', 'B946**', 1699416030049, 10, 'casino', 'Gold', 'gameId=5195&extGameId=1351&origin=New%20Games&ProviderID=14', 1.3, 13)",
+        "(8, 'Triple Lucky 8s', 'B4777**', 1699416030049, 20, 'casino', 'Gold', 'gameId=5386&extGameId=102217&origin=New%20Games&ProviderID=13', 1.3, 26)",
+        "(10, 'Triple Card Gamble', 'B6949**', 1699416030049, 10, 'casino', 'Gold', 'gameId=5387&extGameId=1181&origin=New%20Games&ProviderID=10', 13, 130)",
+        "(11, 'Dragons Treasure', 'B4522**', 1699416030049, 10, 'casino', 'Gold', 'gameId=5393&extGameId=11507&origin=New%20Games&ProviderID=13', 1.3, 13)",
+        "(12, 'Merge Up', 'B1255**', 1699416030049, 14, 'casino', 'Gold', 'gameId=5148&extGameId=softswiss:MergeUp&origin=New%20Games&ProviderID=16', 40, 560)",
+        "(13, 'Mummy Gold', 'B322**', 1699416030049, 220, 'casino', 'Gold', 'gameId=5358&extGameId=softswiss:MummysGold&origin=New%20Games&ProviderID=16', 1.3, 286)"
+    ],
+    "CASINO_LASTRECORD": "SELECT * FROM boards order by id desc limit 1",
+    "CASINO_RECORDS": "SELECT * FROM boards WHERE id > ?"
+}
